@@ -17,15 +17,18 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link href="/css/blog.css" rel="stylesheet">
   </head>
-
   <body>
-
     <div class="container">
       @include('layouts.nav')
 
-      @yield('content')
+      <main role="main" class="container">
+      <div class="row">
+        @yield('content')
 
-      @yield('layouts.footer')
-
+        @include('layouts.sidebar')
+      </div><!-- /.row -->
+    </main><!-- /.container -->
+      @include('layouts.footer')
+    </div>
   </body>
 </html>
